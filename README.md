@@ -1,2 +1,2 @@
 # Fikali
-Repository for Fikali
+Repository for Fikali virus
