@@ -1,0 +1,1 @@
+Ten język nie jest jeszcze gotowy. Przepraszam.
