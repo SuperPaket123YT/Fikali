@@ -254,92 +254,92 @@ echo.
 echo 1 - Run a virus
 echo 2 - Settings
 echo 3 - Remove virus from startup
-echo 4 - Инструкция (это окно)
-echo 5 - Выйти
+echo 4 - Instructions (this window)
+echo 5 - Exit
 echo.
-echo Читать дальше (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 1: "Запустить вирус"
+echo Step 1: "Run a virus"
 echo.
-echo Если вы выберите "1 - Запустить вирус", то появятся 2 предупреждения о том, 
-echo что перезагрузка компьютера вам не поможет, так как этот вирус прописывается в автозагрузку. 
-echo Затем начнётся спам разными приложениями и вкладками браузера, для которых Интернет не нужен.
-echo После перезагрузки ПК опять всё начнётся. Решение этого смотрите в пункте 3
+echo If you select "1 - Run a virus", then 2 warnings will appear indicating
+echo that restarting the computer will not help you, since this virus is registered in startup.
+echo Then spamming with different applications and tabs will begin. 
+echo After restarting the PC, everything will start again. See the solution to this in point 3
 echo. 
-echo Читать дальше (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 2: "Настройки"
+echo Step 2: "Settings"
 echo.
-echo Когда вы зашли в "Настройки" будут пункты:
+echo When you go to "Settings" there will be items:
 echo.
-echo 1 - Поменять цвет текста
-echo 2 - Центр обновлений (не скоро)
-echo 3 - Назад
+echo 1 - Change text color
+echo 2 - Update Center (soon)
+echo 3 - Back
 echo.
-echo Читать дальше (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 2.1: "Поменять цвет текста"
+echo Step 2.1: "Change text color"
 echo.
-echo Когда вы выберите этот пункт, появятся цвета на выбор, такие как красный, желтый, синий, голубой, зелёный и т.д.
+echo When you select this option, colors to choose from will appear, such as red, yellow, blue, cyan, green, etc.
 echo.
-echo Читать далее (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 2.2: "Центр обновлений"
+echo Step 2.2: "Update Center"
 echo.
-echo Он не работает пока что. Зачем для него писать инструкцию?
+echo It doesn't work yet. Why write instructions for it?
 echo.
-echo Читать далее (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 2.3: "Назад"
+echo Step 2.3: "Back"
 echo.
-echo Выбрав этот пункт, вы вернётесь в главное меню приложения.
+echo By selecting this item, you will return to the main menu of the application.
 echo.
-echo Читать далее (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 3: "Удалить вирус из автозагрузки"
+echo Step 3: "Remove virus from startup"
 echo.
-echo Когда вы выберите этот пункт вирус не будет загружаться при включении ПК
+echo When you select this item, the virus will not load when you turn on the PC
 echo.
-echo Читать дальше (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 4: "Инструкция" (это окно)
+echo Step 4: "Instructions" (this window)
 echo.
-echo Зачем ты читаешь инструкцию для инструкции?
+echo Why are you reading the instructions for instructions?
 echo.
-echo Читать дальше (нажмите Enter)
+echo Read more (press Enter)
 pause >nul
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Пункт 5: "Выйти"
+echo Step 5: "Exit"
 echo.
-echo Когда вы выберите этот пункт, приложение у вас спросит "Вы точно хотите выйти?".
-echo Если вы нажмёте "y" и Enter, то приложение удалить временные файлы и закроется.
+echo When you select this item, the application will ask you "Are you sure you want to exit?"
+echo If you press "y" and Enter, the application will delete temporary files and close.
 echo.
-echo Конец инструкции
+echo End of instructions
 echo.
-echo Для возвращения в меню нажмите Enter...
+echo To return to the menu press Enter...
 pause >nul
 goto menu
 
