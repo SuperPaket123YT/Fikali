@@ -141,7 +141,7 @@ echo.
 echo %name%, выберите пункт:
 echo.
 echo 1 - Поменять цвет текста
-echo 2 - Центр обновлений (скоро)
+echo 2 - Центр обновлений
 echo 3 - Назад
 
 echo.
@@ -235,9 +235,63 @@ goto menu
 cls
 type C:\fikali\files\art.txt
 echo.
-echo Я же написал "(скоро)". НЕ ГОТОВО!
+echo %name%, вы хотите проверить обновления? (y/n)
 echo.
-echo Для возвращения в меню нажмите Enter
+
+Set /p upd="Ваш выбор: "
+if not defined upd goto updcenter
+if "%upd%"=="y" (goto updchk)
+if "%upd%"=="n" (goto setng)
+cls
+goto updcenter
+
+:updchk
+cls
+del C:\temp_fikali\ver.txt
+bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/SuperPaket123YT/Fikali/fikali/ver.txt C:\temp_fikali\ver.txt >nul
+cd C:\temp_fikali
+find /I ver.txt "2.0" >nul
+if %errorlevel% equ 0 (
+  goto updno
+) else (
+    goto updfind
+  )
+goto updchk
+
+:updfind
+cls
+type C:\fikali\files\art.txt
+echo.
+echo Обновление найдено. Скачать? (y/n)
+echo.
+
+Set /p updd="Ваш выбор: "
+if not defined updd goto updfind
+if "%updd%"=="y" (goto upddown)
+if "%updd%"=="n" (goto setng)
+cls
+goto updfind
+
+:upddown
+cls
+type C:\fikali\files\art.txt
+echo.
+echo Скачивание...
+bitsadmin.exe /transfer "GGYT" https://github.com/SuperPaket123YT/Fikali/releases/download/fikalivirus/Fikali.exe C:\temp_fikali\Fikali.exe >nul
+cls
+type C:\fikali\files\art.txt
+echo.
+echo Скачивание завершено. Установка....
+timeout /t 5 /nobreak
+start C:\temp_fikali\Fikali.exe
+exit
+
+:updno
+type C:\Fikali\files\art.txt
+echo.
+echo У вас установлена последняя версия.
+echo.
+echo Нажмите Enter для возвращения в меню...
 pause >nul
 goto setng
 

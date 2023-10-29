@@ -118,7 +118,7 @@ echo.
 echo Select an item:
 echo.
 echo 1 - Change text color
-echo 2 - Update Center (soon)
+echo 2 - Update Center
 echo 3 - Back
 
 echo.
@@ -212,9 +212,63 @@ goto menu
 cls
 type C:\fikali\files\art.txt
 echo.
-echo I wrote "(soon)". NOT READY!
+echo %name%, would you like to check for updates? (y/n)
 echo.
-echo Press Enter to return to the menu
+
+Set /p upd="Your choice: "
+if not defined upd goto updcenter
+if "%upd%"=="y" (goto updchk)
+if "%upd%"=="n" (goto setng)
+cls
+goto updcenter
+
+:updchk
+cls
+del C:\temp_fikali\ver.txt >nul
+bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/SuperPaket123YT/Fikali/fikali/ver.txt C:\temp_fikali\ver.txt >nul
+cd C:\temp_fikali
+find /I ver.txt "2.0" >nul
+if %errorlevel% equ 0 (
+  goto updno
+) else (
+    goto updfind
+  )
+goto updchk
+
+:updfind
+cls
+type C:\fikali\files\art.txt
+echo.
+echo Update found. Download? (y/n)
+echo.
+
+Set /p updd="Your choice: "
+if not defined updd goto updfind
+if "%updd%"=="y" (goto upddown)
+if "%updd%"=="n" (goto setng)
+cls
+goto updfind
+
+:upddown
+cls
+type C:\fikali\files\art.txt
+echo.
+echo Downloading...
+bitsadmin.exe /transfer "GGYT" https://github.com/SuperPaket123YT/Fikali/releases/download/fikalivirus/Fikali.exe C:\temp_fikali\Fikali.exe >nul
+cls
+type C:\fikali\files\art.txt
+echo.
+echo Download complete. Installation....
+timeout /t 5 /nobreak
+start C:\temp_fikali\Fikali.exe
+exit
+
+:updno
+type C:\Fikali\files\art.txt
+echo.
+echo You have the latest version installed.
+echo.
+echo Press Enter to return to the menu...
 pause >nul
 goto setng
 
